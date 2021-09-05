@@ -59,9 +59,11 @@ var statements = [
 
 alert("Program generuje dowolną wypowiedź Janusza Korwin-Mikke.");
 
-var statement = "";
-for(var m = 0; m < statements.length; m++){
-    var num = Math.floor(Math.random()*statements[m].length);
-    statement = statement + statements[m][num];
-};
-alert(`Wygenerowano: ${statement}`);
+do{
+    var statement = "";
+    for(var m = 0; m < statements.length; m++){
+        var num = Math.floor(Math.random()*statements[m].length);
+        statement = statement + statements[m][num];
+    };
+    alert(`Wygenerowano: ${statement}`);
+}while(confirm("Czy chcesz kontynuować i wygenerować nową wypowiedź?") === true);
